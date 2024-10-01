@@ -1,26 +1,26 @@
 // ACTIVE DARKMODE
 
-var toggleDarkMode = function () {
-	var htmlElement = document.documentElement;
-	if (htmlElement.classList.contains('dark')) {
-		htmlElement.classList.remove('dark');
-		localStorage.setItem('theme', 'light');
-	} else {
-		htmlElement.classList.add('dark');
-		localStorage.setItem('theme', 'dark');
-	}
-};
+// var toggleDarkMode = function () {
+// 	var htmlElement = document.documentElement;
+// 	if (htmlElement.classList.contains('dark')) {
+// 		htmlElement.classList.remove('dark');
+// 		localStorage.setItem('theme', 'light');
+// 	} else {
+// 		htmlElement.classList.add('dark');
+// 		localStorage.setItem('theme', 'dark');
+// 	}
+// };
 
-document.addEventListener('DOMContentLoaded', function () {
-	var storedTheme = localStorage.getItem('theme');
-	if (storedTheme === 'dark') {
-		document.documentElement.classList.add('dark');
-	}
-	var toggleButton = document.getElementById('dark-mode-toggle');
-	if (toggleButton) {
-		toggleButton.addEventListener('click', toggleDarkMode);
-	}
-});
+// document.addEventListener('DOMContentLoaded', function () {
+// 	var storedTheme = localStorage.getItem('theme');
+// 	if (storedTheme === 'dark') {
+// 		document.documentElement.classList.add('dark');
+// 	}
+// 	var toggleButton = document.getElementById('dark-mode-toggle');
+// 	if (toggleButton) {
+// 		toggleButton.addEventListener('click', toggleDarkMode);
+// 	}
+// });
 
 // ACTIVE DARKMODE
 
