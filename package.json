@@ -1,20 +1,20 @@
 {
-  "name": "portfolio-v1",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "tailwindcss": "^3.4.10"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.6.0",
-    "gsap": "^3.12.5"
-  }
+	"name": "portfolio-v1",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"tailwindcss": "^3.4.10"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.6.0",
+		"gsap": "^3.12.5"
+	}
 }
