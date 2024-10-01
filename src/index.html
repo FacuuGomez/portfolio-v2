@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="../dist/output.css" rel="stylesheet" />
+		<link
+			href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Portafolio FG</title>
+		<!--  npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch -->
+	</head>
+
+	<!-- <body
+		class="flex items-center justify-center min-h-screen bg-gradient-to-tl from-[--primary-color] to-black text-[--font-light]"
+	> -->
+	<body
+		class="flex items-center justify-center min-h-screen bg-[--bg-dark] text-[--font-light]"
+	>
+		<!-- MENU ASIDE MOBILE -->
+
+		<div
+			id="modal"
+			class="fixed inset-0 z-20 items-center justify-end hidden transition-opacity opacity-0 backdrop-blur-sm"
+		>
+			<aside
+				class="flex flex-col justify-between w-3/4 h-full p-4 transition-transform transform translate-x-full bg-black shadow opacity-0 bg-opacity-70 rounded-2xl"
+			>
+				<div class="inline-flex justify-end">
+					<button
+						class="active:bg-[--primary-color] sm:hover:bg-[--primary-color] p-2 rounded-xl transition-all sm:duration-200"
+						id="closeModal"
+					>
+						<i class="fa-solid fa-xmark fa-2xl"></i>
+					</button>
+				</div>
+
+				<ul
+					class="grid flex-row justify-center w-full gap-8 text-2xl font-semibold text-center"
+				>
+					<li>
+						<a
+							href="#about-me"
+							class="navbtn active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 rounded-xl transition-all sm:duration-200"
+						>
+							SOBRE MI
+						</a>
+					</li>
+					<li>
+						<a
+							href="#proyects"
+							class="navbtn active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 rounded-xl transition-all sm:duration-200"
+						>
+							MIS PROYECTOS
+						</a>
+					</li>
+					<li>
+						<a
+							href="#contact"
+							class="navbtn active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 rounded-xl transition-all sm:duration-200"
+						>
+							CONTACTO
+						</a>
+					</li>
+				</ul>
+
+				<ul
+					class="flex items-end justify-center w-full gap-8 mb-6 font-semibold"
+				>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/facu-gomez/"
+							target="_blank"
+							class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:duration-200"
+						>
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/FacuuGomez"
+							target="_blank"
+							class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:duration-200"
+						>
+							<i class="fa-brands fa-github fa-2xl"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							href="mailto:facuugomez67@gmail.com"
+							target="_blank"
+							class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:duration-200"
+						>
+							<i class="fa-solid fa-envelope fa-2xl"></i>
+						</a>
+					</li>
+				</ul>
+			</aside>
+		</div>
+
+		<!-- MENU ASIDE MOBILE -->
+
+		<!-- LANDING -->
+
+		<main id="" class="sm:overflow-x-hidden">
+			<!-- NAVBAR -->
+
+			<nav
+				class="fixed top-0 left-0 z-10 flex items-center justify-center w-full p-4 bg-black bg-opacity-30 backdrop-blur-sm sm:h-16"
+			>
+				<div class="flex items-center justify-between w-full sm:max-w-7xl">
+					<a href="#">
+						<img class="w-20" src="../assets/fg-logo-blue-1.png" />
+					</a>
+
+					<ul class="justify-end hidden w-full gap-8 font-semibold md:flex">
+						<li>
+							<a
+								href="#about-me"
+								class="navbtn active:text-[--primary-color] sm:hover:text-[--primary-color] transition-all sm:duration-200"
+							>
+								SOBRE MI
+							</a>
+						</li>
+						<li>
+							<a
+								href="#proyects"
+								class="navbtn active:text-[--primary-color] sm:hover:text-[--primary-color] transition-all sm:duration-200"
+							>
+								MIS PROYECTOS
+							</a>
+						</li>
+						<li>
+							<a
+								href="#contact"
+								class="navbtn active:text-[--primary-color] sm:hover:text-[--primary-color] transition-all sm:duration-200"
+							>
+								CONTACTO
+							</a>
+						</li>
+					</ul>
+
+					<button
+						class="active:bg-[--primary-color] sm:hover:bg-[--primary-color] sm:hidden p-2 rounded-xl transition-all sm:duration-200"
+						id="openModal"
+					>
+						<i class="fa-solid fa-grip fa-2xl"></i>
+					</button>
+				</div>
+			</nav>
+
+			<!-- NAVBAR -->
+
+			<!-- MAIN -->
+
+			<section
+				id="dev"
+				class="relative flex flex-col items-center justify-center h-screen gap-6"
+			>
+				<div class="flex-col mx-4 sm:max-w-7xl">
+					<h1 class="text-4xl font-semibold">
+						HOLA, SOY
+						<span class="text-[--primary-color] block">FACUNDO GÓMEZ.</span>
+					</h1>
+					<h2 class="mb-4 text-2xl font-semibold">DESARROLLADOR FULLSTACK.</h2>
+					<p>
+						Desarrollador Web Fullstack con experiencia en e-commerce realizado
+						en el Bootcamp Henry con scrum como metodología de trabajo, páginas
+						web creadas en el entorno de Javascript con bases de datos
+						relacionales y servicios de terceros.
+					</p>
+
+					<!-- <div class="w-full"> -->
+					<button
+						class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl mt-4 transition-all duration-200"
+					>
+						<a href="#about-me"> MÁS SOBRE MI </a>
+					</button>
+					<!-- </div> -->
+				</div>
+
+				<ul
+					class="absolute flex items-end justify-center w-full gap-8 font-semibold bottom-24"
+				>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/facu-gomez/"
+							target="_blank"
+							class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:sm:duration-200"
+						>
+							<i class="fa-brands fa-linkedin fa-2xl"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/FacuuGomez"
+							target="_blank"
+							class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:sm:duration-200"
+						>
+							<i class="fa-brands fa-github fa-2xl"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							href="mailto:facuugomez67@gmail.com"
+							target="_blank"
+							class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:sm:duration-200"
+						>
+							<i class="fa-solid fa-envelope fa-2xl"></i>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- MAIN -->
+
+			<!-- ABOUT ME -->
+
+			<section
+				id="about-me"
+				class="flex flex-col items-center justify-center mx-4 py-28"
+			>
+				<div class="flex flex-col items-center w-full gap-6 sm:max-w-7xl">
+					<h2 class="w-full text-4xl font-semibold">SOBRE MI</h2>
+
+					<div
+						class="flex flex-col items-center w-full gap-6 sm:flex-row-reverse"
+					>
+						<img
+							src="../assets/yo.jpg"
+							class="border-8 rounded-full size-64 border-[--primary-color] p-2"
+						/>
+
+						<!-- <p>
+						Soy estudiante de la carrera de Ingeniería Informática en la
+						Universidad Nacional de La Matanza, graduado como Full Stack Web
+						Developer en el Bootcamp Henry en el 2022. En Henry aprendí mucho
+						sobre código y a trabajar en equipo utilizando distintas
+						metodologías de trabajo. Realice y trabaje en varios proyectos de
+						manera independiente. Actualmente me encuentro en búsqueda de mi
+						primer experiencia formal y continuar adquiriendo nuevos
+						conocimientos, experiencias acompañados de un crecimiento personal.
+						Me encuentro en un constante aprendizaje, soy un apasionado
+						autodidacta.
+					</p> -->
+
+						<ul class="grid w-full grid-cols-2 gap-4 text-lg">
+							<li>
+								<label class="opacity-50">Nombre:</label>
+								<p>Facundo Nahuel</p>
+							</li>
+							<li>
+								<label class="opacity-50">Apellido:</label>
+								<p>Gómez</p>
+							</li>
+							<li>
+								<label class="opacity-50">Edad:</label>
+								<p>22 años</p>
+							</li>
+							<li>
+								<label class="opacity-50">Nacionalidad:</label>
+								<p>Argentina</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="w-full">
+						<button
+							class="bg-[--primary-color] active:opacity-80 sm:hover:opacity-80 px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+						>
+							<a
+								href="../assets/CV-Facundo-Gomez.pdf"
+								download="CV-Facundo-Gómez-FullStack"
+								title="CV"
+							>
+								DESCARGAR CV
+							</a>
+						</button>
+					</div>
+				</div>
+
+				<hr class="w-1/2 my-24 border rounded-full sm:w-80 border-white/20" />
+
+				<div class="flex flex-col items-center w-full gap-8 sm:max-w-7xl">
+					<h2 class="w-full text-2xl font-semibold sm:flex sm:justify-center">
+						MIS HABILIDADES
+					</h2>
+
+					<div class="grid w-full grid-cols-2 gap-8 place-items-center">
+						<div class="">
+							<div class="relative size-28">
+								<svg
+									class="w-full h-full transform -rotate-90"
+									viewBox="0 0 36 36"
+								>
+									<circle
+										class="text-white/20"
+										stroke-width="2"
+										stroke="currentColor"
+										fill="none"
+										cx="18"
+										cy="18"
+										r="16"
+									/>
+									<circle
+										class="text-[--primary-color]"
+										stroke-width="2"
+										stroke-dasharray="80, 100"
+										stroke-linecap="round"
+										stroke="currentColor"
+										fill="none"
+										cx="18"
+										cy="18"
+										r="16"
+									/>
+								</svg>
+								<div
+									class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+								>
+									80%
+								</div>
+								<p class="flex justify-center font-semibold">Javascript</p>
+							</div>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="85, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								85%
+							</div>
+							<p class="flex justify-center font-semibold">Html</p>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="70, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								70%
+							</div>
+							<p class="flex justify-center font-semibold">Css</p>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="80, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								80%
+							</div>
+							<p class="flex justify-center font-semibold">React</p>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="50, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								50%
+							</div>
+							<p class="flex justify-center font-semibold">Sql</p>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="70, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								70%
+							</div>
+							<p class="flex justify-center font-semibold">Typescript</p>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="75, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								75%
+							</div>
+							<p class="flex justify-center font-semibold">Tailwind</p>
+						</div>
+
+						<div class="relative size-28">
+							<svg
+								class="w-full h-full transform -rotate-90"
+								viewBox="0 0 36 36"
+							>
+								<circle
+									class="text-white/20"
+									stroke-width="2"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+								<circle
+									class="text-[--primary-color]"
+									stroke-width="2"
+									stroke-dasharray="65, 100"
+									stroke-linecap="round"
+									stroke="currentColor"
+									fill="none"
+									cx="18"
+									cy="18"
+									r="16"
+								/>
+							</svg>
+							<div
+								class="absolute inset-0 flex items-center justify-center text-xl font-semibold"
+							>
+								65%
+							</div>
+							<p class="flex justify-center font-semibold">Next</p>
+						</div>
+					</div>
+
+					<hr class="w-1/2 my-24 border rounded-full sm:w-80 border-white/20" />
+
+					<div class="flex flex-col items-center w-full gap-8">
+						<h2 class="w-full text-2xl font-semibold sm:flex sm:justify-center">
+							EXPERIENCIA & EDUCACIÓN
+						</h2>
+
+						<div class="flex flex-col gap-6">
+							<div class="flex items-start">
+								<div>
+									<div
+										class="bg-[--primary-color] size-12 grid place-content-center rounded-full"
+									>
+										<i class="fa-solid fa-briefcase"></i>
+									</div>
+									<hr class="mt-6 rotate-90 opacity-30" />
+								</div>
+
+								<div class="flex flex-col gap-2 ml-4">
+									<div class="flex">
+										<span
+											class="px-4 py-2 text-xs font-semibold bg-black border rounded-full border-white/20 bg-opacity-30"
+											>2023 - PRESENTE</span
+										>
+									</div>
+
+									<div>
+										<p class="font-semibold">
+											DESARROLLO WEB <span class="opacity-30">- AUTÓNOMO</span>
+										</p>
+										<p class="text-sm">
+											Creación de webs completamente personalizadas y
+											funcionales.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div>
+									<div
+										class="bg-[--primary-color] size-12 grid place-content-center rounded-full"
+									>
+										<i class="fa-solid fa-graduation-cap"></i>
+									</div>
+									<hr class="mt-6 rotate-90 opacity-30" />
+								</div>
+
+								<div class="flex flex-col gap-2 ml-4">
+									<div class="flex">
+										<span
+											class="px-4 py-2 text-xs font-semibold bg-black border rounded-full border-white/20 bg-opacity-30"
+											>2022 - PRESENTE</span
+										>
+									</div>
+									<div>
+										<p class="font-semibold">
+											INGENIERIA INFORMÁTICA
+											<span class="opacity-30">- UNLaM</span>
+										</p>
+										<p class="text-sm">
+											Estudiante en la Universidad Nacional de La Matanza.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div>
+									<div
+										class="bg-[--primary-color] size-12 grid place-content-center rounded-full"
+									>
+										<i class="fa-solid fa-graduation-cap"></i>
+									</div>
+									<hr class="mt-6 rotate-90 opacity-30" />
+								</div>
+
+								<div class="flex flex-col gap-2 ml-4">
+									<div class="flex">
+										<span
+											class="px-4 py-2 text-xs font-semibold bg-black border rounded-full border-white/20 bg-opacity-30"
+											>2022</span
+										>
+									</div>
+									<div>
+										<p class="font-semibold">
+											DESARROLLO WEB FULLSTACK
+											<span class="opacity-30">- HENRY</span>
+										</p>
+										<p class="text-sm">
+											Estudiante en Henry abarcando tecnologías en el entorno de
+											Javascript.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="flex items-start">
+								<div>
+									<div
+										class="bg-[--primary-color] size-12 grid place-content-center rounded-full"
+									>
+										<i class="fa-solid fa-graduation-cap"></i>
+									</div>
+									<hr class="mt-6 rotate-90 opacity-30" />
+								</div>
+
+								<div class="flex flex-col gap-2 ml-4">
+									<div class="flex">
+										<span
+											class="px-4 py-2 text-xs font-semibold bg-black border rounded-full border-white/20 bg-opacity-30"
+											>2019</span
+										>
+									</div>
+									<div>
+										<p class="font-semibold">
+											BACHILLER EN CIENCIAS SOCIALES
+											<span class="opacity-30">- I.E.E</span>
+										</p>
+										<p class="text-sm">
+											Estudios secundarios en el Instituto Educacional Estrada.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ABOUT ME -->
+
+			<!-- PROYECTS -->
+
+			<section
+				id="proyects"
+				class="flex flex-col items-center justify-center mx-4 py-28"
+			>
+				<div>
+					<h2 class="mb-10 text-4xl font-semibold text-center">
+						MIS PROYECTOS
+					</h2>
+
+					<div
+						class="flex flex-col gap-10 sm:flex-row sm:flex-wrap sm:justify-center sm:max-w-7xl"
+					>
+						<div
+							class="relative border border-white/20 rounded-xl sm:w-[400px] h-[525px] bg-black bg-opacity-30"
+						>
+							<img
+								class="rounded-t-xl"
+								src="../assets/mockups/pi-web.jpg"
+								alt="MyManga"
+							/>
+							<span
+								class="absolute left-4 top-4 rounded-full text-xs font-semibold bg-[--primary-color] px-4 py-2"
+								>WEB INTERACTIVA</span
+							>
+
+							<div class="flex flex-col gap-6 px-4 py-6 rounded-b-xl">
+								<div class="flex flex-col gap-2">
+									<h2 class="text-2xl">Pokemon - PI</h2>
+									<p>
+										Creación y consumo de REST API a través de distintos
+										endpoints en una interfáz creada con React.
+									</p>
+									<p class="opacity-50">
+										Tecnologías: Postgres, Node, Express, React, Css.
+									</p>
+								</div>
+
+								<div
+									class="absolute bottom-5 left-[20%] flex justify-center gap-6"
+								>
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://github.com/FacuuGomez/PI-Pokemons"
+										target="_blank"
+										title="Repositorio"
+									>
+										<i class="mr-2 fa-solid fa-code"></i>
+										CÓDIGO
+									</a>
+
+									<!-- <a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200 "
+										href="https://github.com/FacuuGomez/PI-Pokemons"
+										target="_blank"
+										title="Web"
+									> -->
+									<a
+										class="border-2 border-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200 cursor-not-allowed opacity-50"
+										title="Web"
+									>
+										<i class="mr-2 fa-solid fa-globe"></i>
+										WEB
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="relative border border-white/20 rounded-xl sm:w-[400px] h-[525px] bg-black bg-opacity-30"
+						>
+							<img
+								class="rounded-t-xl"
+								src="../assets/mockups/pf-web.jpg"
+								alt="MyManga"
+							/>
+							<span
+								class="absolute left-4 top-4 rounded-full text-xs font-semibold bg-[--primary-color] px-4 py-2"
+								>E-COMMERCE</span
+							>
+
+							<div class="flex flex-col gap-6 px-4 py-6 rounded-b-xl">
+								<div class="flex flex-col gap-2">
+									<h2 class="text-2xl">My Manga - PF</h2>
+									<p>
+										E-commerce de mangas digitales realizado en grupo durante el
+										curso de Henry utilizando como metodologia de trabajo scrum.
+									</p>
+									<p class="opacity-50">
+										Tecnologías: Postgres, Express, Node, Tailwind, React,
+										Firebase, Stripe.
+									</p>
+								</div>
+
+								<div
+									class="absolute bottom-5 left-[20%] flex justify-center gap-6"
+								>
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://github.com/IvanaSDW/pf_with_vite"
+										target="_blank"
+										title="Repositorio"
+									>
+										<i class="mr-2 fa-solid fa-code"></i>
+										CÓDIGO
+									</a>
+
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://mymangastore.netlify.app/"
+										target="_blank"
+										title="Web"
+									>
+										<i class="mr-2 fa-solid fa-globe"></i>
+										WEB
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="relative border border-white/20 rounded-xl sm:w-[400px] h-[525px] bg-black bg-opacity-30"
+						>
+							<img
+								class="rounded-t-xl"
+								src="../assets/mockups/invitacion-web.jpg"
+								alt="MyManga"
+							/>
+							<span
+								class="absolute left-4 top-4 rounded-full text-xs font-semibold bg-[--primary-color] px-4 py-2"
+								>LANDING</span
+							>
+
+							<div class="flex flex-col gap-6 px-4 py-6 rounded-b-xl">
+								<div class="flex flex-col gap-2">
+									<h2 class="text-2xl">Invitación Digital</h2>
+									<p>Landing estilo invitación digital.</p>
+									<p class="opacity-50">Tecnologías: Html, Css, Javascript.</p>
+								</div>
+
+								<div
+									class="absolute bottom-5 left-[20%] flex justify-center gap-6"
+								>
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://github.com/FacuuGomez/invitacion-casamiento"
+										target="_blank"
+										title="Repositorio"
+									>
+										<i class="mr-2 fa-solid fa-code"></i>
+										CÓDIGO
+									</a>
+
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://ezequielyanalia.netlify.app/"
+										target="_blank"
+										title="Web"
+									>
+										<i class="mr-2 fa-solid fa-globe"></i>
+										WEB
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="relative border border-white/20 rounded-xl sm:w-[400px] h-[525px] bg-black bg-opacity-30"
+						>
+							<img
+								class="rounded-t-xl"
+								src="../assets/mockups/estudio-web.jpg"
+								alt="MyManga"
+							/>
+							<span
+								class="absolute left-4 top-4 rounded-full text-xs font-semibold bg-[--primary-color] px-4 py-2"
+								>LANDING & CMS</span
+							>
+
+							<div class="flex flex-col gap-6 px-4 py-6 rounded-b-xl">
+								<div class="flex flex-col gap-2">
+									<h2 class="text-2xl">Estudio Jurídico</h2>
+									<p>Landing publicitaria y gestión de clientes.</p>
+									<p class="opacity-50">
+										Tecnologías: Postgres, Express, Node, React, Css, Firebase.
+									</p>
+								</div>
+
+								<div
+									class="absolute bottom-5 flex justify-center gap-6 left-[20%]"
+								>
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://github.com/FacuuGomez/frontend-estudio"
+										target="_blank"
+										title="Repositorio"
+									>
+										<i class="mr-2 fa-solid fa-code"></i>
+										CÓDIGO
+									</a>
+
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://martinez-ojeda-gomez-ibarlucea.netlify.app/"
+										target="_blank"
+										title="Web"
+									>
+										<i class="mr-2 fa-solid fa-globe"></i>
+										WEB
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="relative border border-white/20 rounded-xl sm:w-[400px] h-[525px] bg-black bg-opacity-30"
+						>
+							<img
+								class="rounded-t-xl"
+								src="../assets/mockups/tbt-pedidos.jpg"
+								alt="MyManga"
+							/>
+							<span
+								class="absolute left-4 top-4 rounded-full text-xs font-semibold bg-[--primary-color] px-4 py-2"
+								>APP & CMS</span
+							>
+
+							<div class="flex flex-col gap-6 px-4 py-6 rounded-b-xl">
+								<div class="flex flex-col gap-2">
+									<h2 class="text-2xl">The Burger Town</h2>
+									<p>
+										Aplicación para pedidos con interfáz para cargar nuevos
+										productos o modificar los existentes.
+									</p>
+									<p class="opacity-50">
+										Tecnologías: Postgres, Next, Tailwind.
+									</p>
+								</div>
+
+								<div
+									class="absolute bottom-5 flex justify-center gap-6 left-[20%]"
+								>
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://tbt-pedidos.vercel.app/"
+										target="_blank"
+										title="Repositorio"
+									>
+										<i class="mr-2 fa-solid fa-code"></i>
+										CÓDIGO
+									</a>
+
+									<a
+										class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl transition-all sm:duration-200"
+										href="https://tbt-pedidos.vercel.app/"
+										target="_blank"
+										title="Web"
+									>
+										<i class="mr-2 fa-solid fa-globe"></i>
+										WEB
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- PROYECTS -->
+
+			<!-- SKILLS -->
+
+			<section
+				class="flex flex-col items-center justify-center w-screen h-full my-2 py-28"
+			>
+				<div class="tag-list">
+					<div class="inner">
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Javascript</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Html</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Css</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Node</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Express</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">React</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Next</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Typescript</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Postgres</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Firebase</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Tailwind</p>
+						</div>
+
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Javascript</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Html</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Css</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Node</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Express</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">React</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Next</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Typescript</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Postgres</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Firebase</p>
+						</div>
+						<div
+							class="flex items-center justify-center w-32 h-full px-4 py-2 mx-1 my-2 bg-black border sm:mx-4 border-white/20 tag bg-opacity-30 rounded-xl"
+						>
+							<p class="opacity-50">Tailwind</p>
+						</div>
+
+						<div class="fade"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- SKILLS -->
+
+			<!-- CONTACT -->
+
+			<section
+				id="contact"
+				class="flex items-center justify-center h-screen py-28"
+			>
+				<div class="w-full gap-6 px-4 sm:max-w-7xl">
+					<h2 class="flex justify-center w-full mb-4 text-4xl font-semibold">
+						CONTACTAME
+					</h2>
+
+					<form
+						id="form"
+						name="contact"
+						method="POST"
+						class="flex flex-col w-full"
+					>
+						<ul class="flex flex-col w-full">
+							<li class="flex flex-col mb-4">
+								<label htmlFor="name" for="name" class="mb-2 ml-2 opacity-50"
+									>Nombre</label
+								>
+								<input
+									type="text"
+									name="name"
+									class="flex items-center justify-center p-4 bg-black border border-white/20 bg-opacity-30 rounded-xl focus:outline-none focus:border-[--primary-color]"
+								/>
+							</li>
+							<li class="flex flex-col w-full mb-4">
+								<label htmlFor="email" for="email" class="mb-2 ml-2 opacity-50"
+									>Correo electronico</label
+								>
+								<input
+									type="email"
+									name="email"
+									class="flex items-center justify-center p-4 bg-black border border-white/20 bg-opacity-30 rounded-xl focus:outline-none focus:border-[--primary-color]"
+								/>
+							</li>
+							<li class="flex flex-col w-full mb-4">
+								<label
+									htmlFor="subject"
+									for="subject"
+									class="mb-2 ml-2 opacity-50"
+									>Asunto</label
+								>
+								<input
+									type="text"
+									name="subject"
+									class="flex items-center justify-center p-4 bg-black border border-white/20 bg-opacity-30 rounded-xl focus:outline-none focus:border-[--primary-color]"
+								/>
+							</li>
+							<li class="flex flex-col w-full mb-4">
+								<label htmlFor="text" for="message" class="mb-2 ml-2 opacity-50"
+									>Mensaje</label
+								>
+								<textarea
+									name="message"
+									rows="4"
+									class="flex items-center justify-center p-4 bg-black border border-white/20 bg-opacity-30 rounded-xl focus:outline-none focus:border-[--primary-color]"
+								></textarea>
+							</li>
+						</ul>
+
+						<div class="flex justify-center w-full">
+							<button
+								type="submit"
+								class="border-2 border-[--primary-color] active:bg-[--primary-color] sm:hover:bg-[--primary-color] px-4 py-2 font-semibold rounded-xl mt-4 transition-all sm:duration-200"
+							>
+								ENVIAR
+							</button>
+						</div>
+					</form>
+
+					<div
+						id="success-contact"
+						class="fixed top-0 left-0 z-20 hidden w-full h-full bg-black/30 backdrop-blur-sm"
+					>
+						<div
+							id="modal-contact"
+							class="bg-[--primary-color] mx-auto mt-96 p-4 rounded-[20px] w-[300px] text-center font-semibold opacity-0"
+						>
+							<p>¡Gracias por contactarme!</p>
+						</div>
+					</div>
+
+					<ul class="flex justify-center w-full gap-8 mt-10 font-semibold">
+						<li>
+							<a
+								href="https://www.linkedin.com/in/facu-gomez/"
+								target="_blank"
+								class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:sm:duration-200"
+							>
+								<i class="fa-brands fa-linkedin fa-2xl"></i>
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://github.com/FacuuGomez"
+								target="_blank"
+								class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:sm:duration-200"
+							>
+								<i class="fa-brands fa-github fa-2xl"></i>
+							</a>
+						</li>
+						<li>
+							<a
+								href="mailto:facuugomez67@gmail.com"
+								target="_blank"
+								class="active:text-[--primary-color] sm:hover:text-[--primary-color] rounded-xl transition-all sm:sm:duration-200"
+							>
+								<i class="fa-solid fa-envelope fa-2xl"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- CONTACT -->
+		</main>
+
+		<!-- LANDING -->
+
+		<script src="index.js"></script>
+	</body>
+</html>

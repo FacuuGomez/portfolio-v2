@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-color: #000fff;
+
+	/* --bg-light: #cbd5e1; */
+	--bg-light: #d6e6f2;
+	--bg-dark: #000332;
+
+	--font-light: #d6e6f2;
+	--font-dark: #686868;
+
+	--font: 'Poppins', sans-serif;
+}
+
+body {
+	font-family: var(--font);
+	/* background: var(--background-dark); */
+}
+
+/* ANIMACIONES */
+
+@keyframes slideInFromRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOutToRight {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+}
+
+.slide-in {
+	animation: slideInFromRight 0.3s ease-out;
+}
+
+.slide-out {
+	animation: slideOutToRight 0.3s ease-in;
+}
+
+/* SLIDER */
+
+.tag-list {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.inner {
+	display: flex;
+	width: fit-content;
+	height: 100%;
+	animation: loop 5s linear infinite;
+}
+
+.fade {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+}
+
+@keyframes loop {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-25%);
+	}
+}
+
+#modal-contact {
+	animation: appearanceSuccess 0.3s ease-in-out forwards;
+}
+
+@keyframes appearanceSuccess {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
