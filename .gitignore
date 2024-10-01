@@ -34,14 +34,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-/portfolio-v2
-├── dist
-│   └── output.css
-├── src
-│   └── index.html 
-│   └── index.js 
-│   └── input.css 
-└── _redirects
-└── package-lock.json
-└── package.json
