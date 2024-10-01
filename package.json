@@ -1,27 +1,27 @@
 {
-  "name": "portfolio-v1",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./input.css -o ./dist/output.css --minify",
-    "deploy": "netlify deploy"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "tailwindcss": "^3.4.10"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.6.0",
-    "gsap": "^3.12.5"
-  },
-  "netlify": {
-    "build": {
-      "publish": "dist",
-      "command": "npm run build"
-    }
-  }
+	"name": "portfolio-v1",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+		"deploy": "netlify deploy"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"tailwindcss": "^3.4.10"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.6.0",
+		"gsap": "^3.12.5"
+	},
+	"netlify": {
+		"build": {
+			"publish": "dist",
+			"command": "npm run build"
+		}
+	}
 }
